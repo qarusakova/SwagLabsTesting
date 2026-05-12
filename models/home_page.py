@@ -7,14 +7,13 @@ class HomePage:
     self.page = page
 
     self.burger_menu = page.get_by_role("button", name="Open Menu")
-
     self.logout_link = page.get_by_test_id("logout-sidebar-link")
 
     self.filter_dropdown_menu = page.get_by_test_id("product-sort-container")
 
-    self.inventory_item = page.get_by_test_id("inventory-item")
+    self.inventory_item_name = page.get_by_test_id("inventory-item-name")
 
-    self.inventory_item_description = page.get_by_test_id("inventory-item-description")
+    self.inventory_item_price = page.get_by_test_id("inventory-item-price")
 
   def open(self) -> None:
     self.page.goto(self.URL)
